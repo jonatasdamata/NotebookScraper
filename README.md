@@ -91,7 +91,15 @@ pip install pyautogui
 Faça o download do **ChromeDriver** correspondente à versão do seu navegador Chrome.
 
 ### 2. Configurar o ChromeDriver
-Coloque o `chromedriver.exe` na pasta do seu projeto ou em algum local de sua escolha. Se estiver em outro local, defina o caminho para o arquivo no código.
+-Opção 1: Coloque o chromedriver.exe na mesma pasta onde está o script Python (ou dentro da pasta do projeto). <br/> <br/>
+-Opção 2: Caso você prefira, você pode definir o caminho completo do chromedriver.exe diretamente no código. Para isso, altere a linha:
+```bash
+navegador = opcoesSelenium.Chrome()
+```
+Para incluir o caminho completo do ChromeDriver:
+```bash
+navegador = opcoesSelenium.Chrome(executable_path='C:/caminho/para/seu/chromedriver.exe')
+```
 
 ### 3. Rodar o Script
 Execute o script Python `scraper.py` com o comando:
@@ -99,6 +107,7 @@ Execute o script Python `scraper.py` com o comando:
 ```bash
 python src/scraper.py
 ```
+
 O script irá:
 
 1.Acessar o site da Magazine Luiza. <br/>
